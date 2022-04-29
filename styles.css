@@ -1,0 +1,163 @@
+*, *::before, ::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+}
+
+body{
+    min-height:100vh;
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Content Styles */
+
+.card-wrapper{
+    max-width:350px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    margin: 0 1em;
+}
+
+.card-info{
+    padding:1.5em;
+    font-family: 'Outfit', sans-serif;
+}
+
+.info-parent-element > div{
+    margin-top:1em;
+}
+
+img{
+    max-width: 100%;
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.card-img::before,
+.card-img::after {
+    content: '';
+    position: absolute;
+}
+
+.card-img::before {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--cyan);
+    opacity: 0;
+}
+
+.card-img::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    aspect-ratio: 1;
+    background-image: url('./images/icon-view.svg');
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.card-img:hover::before {
+    opacity: .5;
+}
+
+.card-img:hover::after {
+    opacity: 1;
+}
+
+.title-link{
+    text-decoration: none;
+    font-size: 23px;
+    color:white;
+    font-weight: 600;
+}
+
+.title-link:hover{
+    color:var(--cyan);
+}
+
+.paragraph-element{
+    color:var(--soft-blue);
+}
+
+.purchase-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-info span{
+    margin-left:.5em;
+}
+
+.price-info, .time-info{
+    display: flex;
+    align-items: center;
+}
+
+.price-info{
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.time-info{
+    font-weight: 400;
+    color: var(--soft-blue);
+}
+
+.creator-info{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.creator-avatar{
+    display: flex;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    width:40px;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.contribution{
+    margin-left: 1em;
+    color: var(--soft-blue);
+}
+
+.creator-name{
+    color: white;
+    text-decoration: none;
+}
+
+.creator-name:hover{
+    color: var(--cyan);
+}
+
+/* Media Queries */
+
+@media screen and (max-width:23.4375em){
+    .card-info p{
+        font-size: 14px;
+    }
+    .price-info span,
+    .time-info span{
+        font-size: smaller;
+    }
+}
