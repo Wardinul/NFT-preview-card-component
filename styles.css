@@ -33,7 +33,7 @@ body{
     font-family: 'Outfit', sans-serif;
 }
 
-.info-parent-element > div{
+.info > div{
     margin-top:1em;
 }
 
@@ -85,6 +85,10 @@ img{
     opacity: 1;
 }
 
+.info h1{
+    margin: .5em 0 0 0;
+}
+
 .title-link{
     text-decoration: none;
     font-size: 23px;
@@ -96,7 +100,7 @@ img{
     color:var(--cyan);
 }
 
-.paragraph-element{
+.nft-about{
     color:var(--soft-blue);
 }
 
@@ -151,6 +155,17 @@ img{
 
 .creator-name:hover{
     color: var(--cyan);
+}
+
+footer{
+    margin: 1em 0;
+    color: white;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--cyan);
+    font-family: 'Outfit', sans-serif;
 }
 
 /* Media Queries */
