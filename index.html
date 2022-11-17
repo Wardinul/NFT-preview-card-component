@@ -14,50 +14,53 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@1,800&family=Outfit:wght@300;400;600&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
   
-  <main class="card-wrapper">
-    <div class="card-info">
+  <main class="card card-wrapper">
+    <div class="card__wrapper">
 
-      <div class="card-img"></div>
+      <div class="card__img card-img">
+        <img src="/images/image-equilibrium.jpg" alt="card image">
+      </div>
 
-      <div class="info">
-        <h1>
-          <a href="#" class="title-link">Equilibrium #3429</a>
+      <div class="card__body">
+        <h1 class="card__body__title">
+          <a href="#">Equilibrium #3429</a>
         </h1>
 
-      <div class="nft-about">
-        <p>Our Equilibrium collection promotes balance and calm</p>
-      </div>
-    </div>
+        <div class="card__body__about">
+          <p>Our Equilibrium collection promotes balance and calm</p>
+        </div>
 
-    <div class="purchase-info">
-      <div class="price-info">
-        <img src="images/icon-ethereum.svg" alt="ethereum icon">
-        <span>0.041 ETH</span>
-      </div>
-      <div class="time-info">
-        <img src="images/icon-clock.svg" alt="clock image">
-        <span>3 days left</span>
-      </div>
-    </div>
+        <div class="card__body__purchase">
+          <div class="card__body__purchase__price">
+            <img src="images/icon-ethereum.svg" alt="ethereum icon">
+            <span>0.041 ETH</span>
+          </div>
+          <div class="card__body__purchase__time">
+            <img src="images/icon-clock.svg" alt="clock image">
+            <span>3 days left</span>
+          </div>
+        </div>
 
-    <div class="creator-info">
-      <div class="creator-avatar">
-        <img class="avatar-image" src="images/image-avatar.png" alt="avatar image">
+        <div class="card__body__creator">
+          <div class="card__body__creator__avatar creator-avatar">
+            <img src="images/image-avatar.png" alt="avatar image">
+          </div>
+          
+          <div class="card__body__creator__attribution">
+            <p>Creation of <a href="#" class="card__body__creator__name">Jules Wyvern</a></p>
+          </div>
+        </div>
       </div>
-      
-      <div class="contribution">
-        <p>Creation of <a href="#" class="creator-name">Jules Wyvern</a></p>
-      </div>
-    </div>
 
     </div>
   </main>
 
-  <footer class="attribution">
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Wardin</a>.
+    Coded by <a href="#">Ardelean Alexandru</a>.
   </footer>
 
 </body>

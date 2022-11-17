@@ -21,43 +21,40 @@ body{
 
 /* Card Content Styles */
 
-.card-wrapper{
+.card{
     max-width:350px;
     background-color: var(--card-bg);
     border-radius: 15px;
     margin: 0 1em;
 }
 
-.card-info{
+.card__wrapper{
     padding:1.5em;
     font-family: 'Outfit', sans-serif;
-}
-
-.info > div{
-    margin-top:1em;
 }
 
 img{
     max-width: 100%;
 }
 
-.card-img {
+.card__img{
     position: relative;
     overflow: hidden;
     cursor: pointer;
     border-radius: 15px;
-    min-height: 300px;
-    background-image: url(images/image-equilibrium.jpg);
-    background-size: cover;
 }
 
-.card-img::before,
-.card-img::after {
+.card__body > div{
+    margin-top:1em;
+}
+
+.card__img::before,
+.card__img::after {
     content: '';
     position: absolute;
 }
 
-.card-img::before {
+.card__img::before {
     top: 0;
     bottom: 0;
     right: 0;
@@ -66,7 +63,7 @@ img{
     opacity: 0;
 }
 
-.card-img::after {
+.card__img::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -77,64 +74,65 @@ img{
     opacity: 0;
 }
 
-.card-img:hover::before {
+.card__img:hover::before {
     opacity: .5;
 }
 
-.card-img:hover::after {
+.card__img:hover::after {
     opacity: 1;
 }
 
-.info h1{
+.card__body__title{
     margin: .5em 0 0 0;
 }
 
-.title-link{
+.card__body__title a{
     text-decoration: none;
     font-size: 23px;
     color:white;
     font-weight: 600;
 }
 
-.title-link:hover{
+.card__body__title a:hover{
     color:var(--cyan);
 }
 
-.nft-about{
+.card__body__about{
     color:var(--soft-blue);
 }
 
-.purchase-info{
+.card__body__purchase{
     display: flex;
     justify-content: space-between;
 }
 
-.purchase-info span{
+.card__body__purchase span{
     margin-left:.5em;
 }
 
-.price-info, .time-info{
+.card__body__purchase__price,
+.card__body__purchase__time{
     display: flex;
     align-items: center;
 }
 
-.price-info{
+.card__body__purchase__price{
     font-weight: 600;
     color: var(--cyan);
 }
 
-.time-info{
+.card__body__purchase__time{
     font-weight: 400;
     color: var(--soft-blue);
 }
 
-.creator-info{
+.card__body__creator{
     display: flex;
     align-items: center;
     margin-top: 1em;
 }
 
-.creator-avatar{
+.card__body__creator__avatar{
     display: flex;
     align-items: center;
     background-color: hsl(0, 0%, 100%);
@@ -143,17 +141,17 @@ img{
     border-radius: 50%;
 }
 
-.contribution{
+.card__body__creator__attribution{
     margin-left: 1em;
     color: var(--soft-blue);
 }
 
-.creator-name{
+.card__body__creator__name{
     color: white;
     text-decoration: none;
 }
 
-.creator-name:hover{
+.card__body__creator__name:hover{
     color: var(--cyan);
 }
 
